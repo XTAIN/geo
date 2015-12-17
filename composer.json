@@ -1,0 +1,6 @@
+{
+  "name": "xtain/geo",
+  "autoload": {
+    "psr-4": {"XTAIN\\Geo\\": "src/"}
+  }
+}
