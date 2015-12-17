@@ -41,28 +41,6 @@ class Converter
      * @return float
      * @author Maximilian Ruta <mr@xtain.net>
      */
-    public static function geographicMinutesToKilometers($dist)
-    {
-        return $dist * self::KILOMETER_IN_GEOGRAPHIC_MINUTES;
-    }
-
-    /**
-     * @param float $dist
-     *
-     * @return float
-     * @author Maximilian Ruta <mr@xtain.net>
-     */
-    public static function geographicDegreesToKilometers($dist)
-    {
-        return self::geographicMinutesToKilometers(self::geographicDegreesToGeographicMinutes($dist));
-    }
-
-    /**
-     * @param float $dist
-     *
-     * @return float
-     * @author Maximilian Ruta <mr@xtain.net>
-     */
     public static function kilometersToGeographicDegrees($dist)
     {
         return $dist * self::KILOMETER_IN_GEOGRAPHIC_DEGREES;
@@ -74,8 +52,30 @@ class Converter
      * @return float
      * @author Maximilian Ruta <mr@xtain.net>
      */
+    public static function geographicDegreesToKilometers($dist)
+    {
+        return $dist / self::KILOMETER_IN_GEOGRAPHIC_DEGREES;
+    }
+
+    /**
+     * @param float $dist
+     *
+     * @return float
+     * @author Maximilian Ruta <mr@xtain.net>
+     */
     public static function kilometersToGeographicMinutes($dist)
     {
         return self::geographicDegreesToGeographicMinutes(self::kilometersToGeographicDegrees($dist));
+    }
+
+    /**
+     * @param float $dist
+     *
+     * @return float
+     * @author Maximilian Ruta <mr@xtain.net>
+     */
+    public static function geographicMinutesToKilometers($dist)
+    {
+        return self::geographicDegreesToKilometers(self::geographicMinutesToGeographicDegrees($dist));
     }
 }
