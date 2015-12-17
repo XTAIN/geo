@@ -7,7 +7,7 @@ use XTAIN\Geo\Calculator;
 use XTAIN\Geo\Point;
 use XTAIN\Geo\Distance;
 
-$point1 = new Point(52.520007, 13.404954);
+$point1 = new Point(52.520007, 13.404954); // berlin
 // $point2 = new Point(2, 3);
 
 $boundingBox = BoundingBox::createFromCenterAndDistance(
