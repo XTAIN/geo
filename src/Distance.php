@@ -15,7 +15,7 @@ class Distance
     /**
      * Distance constructor.
      *
-     * @param float $distance (in geographic degrees)
+     * @param float $distance In geographic degrees
      */
     public function __construct($distance)
     {
