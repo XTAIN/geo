@@ -22,6 +22,7 @@ class Point
      *
      * @param float $latitude
      * @param float $longitude
+     * @author Maximilian Ruta <mr@xtain.net>
      */
     public function __construct($latitude, $longitude)
     {
