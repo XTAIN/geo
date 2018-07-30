@@ -1,5 +1,7 @@
 {
   "name": "xtain/geo",
+  "type": "library",
+  "license": "MIT",
   "autoload": {
     "psr-4": {"XTAIN\\Geo\\": "src/"}
   }
